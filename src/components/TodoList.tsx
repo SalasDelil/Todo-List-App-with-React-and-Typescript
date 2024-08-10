@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import TodoTypes from "../TodoTypes";
 import TodoService from "../TodoService";
 import TodoForm from "./TodoForm";
+import { FcFullTrash } from "react-icons/fc";
+import { MdCancel, MdEditNote } from "react-icons/md";
+import { FaCheckCircle } from "react-icons/fa";
+
 import '../css/TodoList.css';
 
 const TodoList = () => {
@@ -58,15 +62,17 @@ const TodoList = () => {
                 />
                 <button
                   className="saveEditBtn"
+                  title="Save"
                   onClick={() => handleEditSave(todo.id)}
                 >
-                  Save
+                  <FaCheckCircle size={"1.5rem"} />
                 </button>
                 <button
                   className="cancelEditBtn"
+                  title="Cancel"
                   onClick={() => handleEditCancel()}
                 >
-                  Cancel
+                  <MdCancel size={"1.5rem"} />
                 </button>
               </div>
             ) : (
@@ -74,15 +80,17 @@ const TodoList = () => {
                 <span className="todoText">{todo.text}</span>
                 <button
                   className="editBtn"
+                  title="Edit"
                   onClick={() => handleEditStart(todo.id, todo.text)}
                 >
-                  Edit
+                  <MdEditNote size={"1.5rem"} />
                 </button>
                 <button
                   className="deleteBtn"
+                  title="Delete"
                   onClick={() => handleDeleteTodo(todo.id)}
                 >
-                  Delete
+                  <FcFullTrash size={"1.5rem"}/>
                 </button>
               </div>
             )}

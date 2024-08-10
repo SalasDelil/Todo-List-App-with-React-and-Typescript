@@ -30,11 +30,15 @@
     display: flex;
     align-items: center;
     padding: 10px;
-    background-color: #f0f8ff;
-    border: 1px solid #007acc;
+    /* background-color: #f5fffe; */
+    box-shadow: 0px 0px  6px #c2c2c2;
     border-radius: 8px;
     margin-bottom: 10px;
     transition: background-color 0.3s ease;
+}
+
+.editText:hover {
+    background-color: #f1f1f1;
 }
 
 .editText input[type="text"] {
@@ -44,37 +48,38 @@
     border-radius: 4px;
     font-size: 16px;
     outline: none;
-    transition: border-color 0.3s ease;
+    transition: box-shadow 0.2s ease;
 }
 
 .editText input[type="text"]:focus {
-    border-color: #007acc;
+    box-shadow: 0px 0px 3px #007acc;
 }
 
 .editBtn, .deleteBtn, .saveEditBtn, .cancelEditBtn {
-    background-color: #00bef8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
-    color: white;
-    padding: 7px 12px;
     margin-left: 10px;
-    border-radius: 5px;
+    border-radius: 50%;
     cursor: pointer;
-    font-size: 14px;
+    width: 2rem;
+    height: 2rem;
     transition: background-color 0.3s ease;
 }
 
-.deleteBtn {
-    background: #d41414;
+.editBtn {
+    color: #007acc;
 }
 
 .saveEditBtn {
-    background: #00c853;
+    color: #00c853;
 }
 
 .cancelEditBtn {
-    background: #ff5252;
+    color: #f51818;
 }
 
 .editBtn:hover, .deleteBtn:hover, .saveEditBtn:hover, .cancelEditBtn:hover {
-    background-color: #007acc;
+    background-color: white;
 }
